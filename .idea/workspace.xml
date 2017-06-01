@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0c24c6c-de5a-4066-bf76-9b386ef505ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/array_list.py" afterPath="$PROJECT_DIR$/array_list.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/huffman.py" afterPath="$PROJECT_DIR$/huffman.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,10 +30,24 @@
       <file leaf-file-name="huffman.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/huffman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+            <state relative-caret-position="631">
+              <caret line="238" column="8" lean-forward="false" selection-start-line="238" selection-start-column="8" selection-end-line="238" selection-end-column="8" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="huffman_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/huffman_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-28">
+              <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1496287699545" expanded="true" signature="83:1299" ph="..." />
+                <marker date="1496287699545" expanded="true" signature="1131:1299" ph="..." />
               </folding>
             </state>
           </provider>
@@ -43,7 +56,7 @@
       <file leaf-file-name="linked_list.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
+            <state relative-caret-position="1615">
               <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
@@ -59,6 +72,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/linked_list.py" />
+        <option value="$PROJECT_DIR$/huffman_tests.py" />
         <option value="$PROJECT_DIR$/huffman.py" />
       </list>
     </option>
@@ -85,6 +99,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -99,7 +114,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -118,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.huffman">
+  <component name="RunManager" selected="Python tests.Unittests in huffman.py">
     <configuration default="false" name="Unittests in array_list_tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -150,6 +164,36 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in huffman_tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project-3-grat2-temp" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/huffman_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in huffman.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project-3-grat2-temp" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/huffman.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -216,14 +260,18 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in array_list_tests.py" />
       <item index="1" class="java.lang.String" itemvalue="Python.huffman" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in huffman_tests.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in huffman.py" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.huffman" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in array_list_tests.py" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in huffman.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.huffman" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in huffman_tests.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in array_list_tests.py" />
       </list>
     </recent_temporary>
   </component>
@@ -241,17 +289,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_array_list_tests_py - 2017.05.27 at 12h 11m 15s.xml">
-      <configuration name="Unittests in array_list_tests.py" configurationId="tests" />
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 19m 50s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_array_list_tests_py - 2017.05.27 at 12h 12m 17s.xml">
-      <configuration name="Unittests in array_list_tests.py" configurationId="tests" />
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 21m 00s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 21m 59s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 22m 24s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 26m 41s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 27m 02s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 27m 15s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 27m 51s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 28m 14s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_huffman_py - 2017.05.31 at 21h 28m 52s.xml">
+      <configuration name="Unittests in huffman.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="655" y="1" width="974" height="1077" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -281,6 +353,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/array_list_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/huffman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2958">
+          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/array_list_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -323,16 +423,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/linked_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
+        <state relative-caret-position="1615">
           <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/huffman_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1496287699545" expanded="true" signature="83:1299" ph="..." />
+            <marker date="1496287699545" expanded="true" signature="1131:1299" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/huffman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+        <state relative-caret-position="631">
+          <caret line="238" column="8" lean-forward="false" selection-start-line="238" selection-start-column="8" selection-end-line="238" selection-end-column="8" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>

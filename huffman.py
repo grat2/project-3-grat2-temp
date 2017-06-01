@@ -1,5 +1,6 @@
 import array_list
 import linked_list
+import struct
 from huffman_bits_io import *
 
 # filename -> array_list
@@ -11,6 +12,7 @@ def count_occurrence(fName):
         for c in line:
             temp = array_list.get(l1, ord(c))
             l1 = array_list.set(l1, ord(c), temp + 1)
+    f1.close()
     return l1
 
 # a HuffmanTree is either a:
@@ -122,10 +124,6 @@ def huffman_encode(f1, f2):
     h_t = build_HuffTree(o_l)
     numCodes = num_leaves(h_t)
     char_codes = build_char_codes(h_t)
-    tempF = open(f2, "wb")
-    tempF.seek(0)
-    tempF.truncate()
-    tempF.close()
     hb_writer = HuffmanBitsWriter(f2)
     hb_writer.write_byte(numCodes) # write number of codes as a single byte
     tempIter = array_list.array_iter(o_l)
@@ -167,13 +165,84 @@ def num_leaves(huffTree):
 # str str -> None
 # decodes the first (input) file and puts the resulting code into the second (output) file using huffman decoding
 def huffman_decode(f1, f2):
+    hb_reader = HuffmanBitsReader(f1)
+    numCodes = hb_reader.read_byte()
+    numCharsLeft = 0
+    o_l = array_list.List([0] * 256, 256, 256)
+    for i in range(numCodes):
+        tempCharVal = hb_reader.read_byte()
+        tempCharCount = hb_reader.read_int()
+        o_l = array_list.set(o_l, tempCharVal, tempCharCount)
+        numCharsLeft += tempCharCount
+    h_t = build_HuffTree(o_l)
+    tempBit = None
+    tempTree = build_HuffTree(o_l)
+    retStr = ""
+    if(type(tempTree) == HuffLeaf):
+        print(tempTree.count)
+        for num in range(tempTree.count):
+            retStr += chr(tempTree.char)
+        return None
+    while(numCharsLeft > 0):
+        if(type(tempTree) == HuffLeaf):
+            retStr += chr(tempTree.char)
+            tempTree = build_HuffTree(o_l)
+            numCharsLeft -= 1
+        elif(type(tempTree) == HuffNode):
+            if(tempBit == False):
+                tempTree = tempTree.left
+            elif(tempBit == True):
+                tempTree = tempTree.right
+            try:
+                tempBit = hb_reader.read_bit()
+            except struct.error:
+                break
+    hb_reader.close()
+    tempF = open(f2, "w")
+    tempF.write(retStr)
+    tempF.close()
     return None
 
-if(__name__ == "__main__"):
-    occur_list_1 = count_occurrence("file0.txt")
-    huffTree1 = build_HuffTree(occur_list_1)
-    print(huffTree1)
-    c_list_1 = build_char_codes(huffTree1)
-    print(c_list_1)
-    retStr = huffman_encode("file0.txt", "file0_encoded.bin")
-    print(retStr)
+import unittest
+import os
+
+class TestList(unittest.TestCase):
+
+    def test_01_textfile(self):
+        s = huffman_encode("textfile.txt", "textfile_encoded.bin")
+        self.assertEqual(s, "acb")
+        # capture errors by running 'diff' on your encoded file
+        # with a *known* solution file
+        err = os.system("FC /B textfile_encoded.bin textfile_encoded_soln.bin")
+        self.assertEqual(err, 0)
+
+    def test_classes(self):
+        hn1 = HuffNode(0, 12, None, None)
+        hn2 = HuffNode(0, 12, None, None)
+        hl1 = HuffLeaf(0, 12)
+        hl2 = HuffLeaf(0, 12)
+        self.assertEqual(hn1, hn2)
+        self.assertEqual(hl1, hl2)
+        self.assertEqual(repr(hn1), "HuffNode({!r}, {!r}, {!r}, {!r})".format(0, 12, None, None))
+        self.assertEqual(repr(hl1), "HuffLeaf({!r}, {!r})".format(0, 12))
+
+    def test_huffman_encoding(self):
+        s1 = huffman_encode("all_as.txt", "all_as_encoded.bin")
+        self.assertEqual(s1, "a")
+        err1 = os.system("FC /B all_as_encoded.bin all_as_encoded_sol.bin")
+        self.assertEqual(err1, 0)
+        s2 = huffman_encode("file0.txt", "file0_encoded.bin")
+        self.assertEqual(s2, " bdca")
+        err2 = os.system("FC /B file0_encoded.bin file0_encoded_sol.bin")
+        self.assertEqual(err2, 0)
+
+    def test_huffman_decode(self):
+        huffman_decode("file0_encoded.bin", "file0_new.txt")
+        err0 = os.system("FC file0_new.txt file0.txt")
+        self.assertEqual(err0, 0)
+        huffman_decode("all_as_encoded.bin", "all_as_new.txt")
+        err1 = os.system("FC all_as_new.txt all_as.txt")
+        self.assertEqual(err1, 0)
+
+if __name__ == '__main__':
+   unittest.main()
