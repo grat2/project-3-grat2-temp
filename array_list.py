@@ -89,3 +89,10 @@ def remove(anylist, index):
         anylist.values[anylist.length-1] = None
         anylist.length = anylist.length - 1
         return (rem, anylist)
+
+# AnyList -> iterator
+# creates an iterator for an AnyList
+def array_iter(anylist, ind = 0):
+    if(ind < anylist.length):
+        yield (anylist.values[ind], ind)
+        yield from array_iter(anylist, ind + 1)
